@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="tsky" x2="0" y2="1">
+      <stop stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#tsky)"/>
+  <circle cx="620" cy="130" r="60" fill="#fff7ed"/>
+  <path d="M0 360q140 80 300 20t280 50 220-10v180H0z" fill="#c2410c"/>
+  <path d="M0 440q180 40 360-20t440 40v140H0z" fill="#9a3412"/>
+  <ellipse cx="260" cy="390" rx="34" ry="16" fill="#1c1917"/>
+  <text x="400" y="575" fill="#fff7ed" font-family="sans-serif" font-size="20" text-anchor="middle">Thar Desert</text>
+</svg>

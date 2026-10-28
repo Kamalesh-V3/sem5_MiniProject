@@ -1,0 +1,10 @@
+{
+  "name": "canvascraft-artgallery-mern",
+  "version": "1.0.0",
+  "description": "Complete MERN Stack Art Gallery & Marketplace Application",
+  "scripts": {
+    "server": "cd backend && node server.js",
+    "client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  }
+}

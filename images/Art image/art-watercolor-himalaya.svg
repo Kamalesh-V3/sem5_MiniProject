@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="hsky" x2="0" y2="1">
+      <stop stop-color="#9ec9e8"/>
+      <stop offset="1" stop-color="#e8f1f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#hsky)"/>
+  <path d="M0 420 180 220 320 380 470 160 800 410v190H0z" fill="#4d6b7a"/>
+  <path d="M0 490q200-80 420 10t380-8v108H0z" fill="#2f8a63"/>
+  <circle cx="120" cy="430" r="28" fill="#c43c4e"/>
+  <circle cx="210" cy="450" r="22" fill="#d3545f"/>
+  <text x="400" y="575" fill="#16324d" font-family="sans-serif" font-size="20" text-anchor="middle">Himalayan Mist</text>
+</svg>

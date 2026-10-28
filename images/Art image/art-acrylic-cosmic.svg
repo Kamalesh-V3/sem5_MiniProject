@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0b1230"/>
+  <circle cx="400" cy="300" r="160" fill="#1e3a8a"/>
+  <circle cx="400" cy="300" r="90" fill="#f59e0b"/>
+  <path d="M160 420 Q400 80 640 420" fill="none" stroke="#f43f5e" stroke-width="18"/>
+  <circle cx="180" cy="120" r="8" fill="#fff"/>
+  <circle cx="640" cy="90" r="6" fill="#fff"/>
+  <circle cx="720" cy="240" r="5" fill="#fff"/>
+  <text x="400" y="560" fill="#f8fafc" font-family="sans-serif" font-size="20" text-anchor="middle">Cosmic Dance</text>
+</svg>

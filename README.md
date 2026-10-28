@@ -134,4 +134,4 @@ This tests:
 10. Admin login
 11. Admin art approval & promotion of customer to artist
 12. Separate admin customer & artist management
-# sem5_MiniProject
+

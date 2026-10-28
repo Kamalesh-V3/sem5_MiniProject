@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="kbg" x2="1" y2="1">
+      <stop stop-color="#1b2744"/>
+      <stop offset="1" stop-color="#c48a2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#kbg)"/>
+  <circle cx="200" cy="148" r="72" fill="#f3c9a0"/>
+  <path d="M70 400c18-118 78-168 130-168s112 50 130 168" fill="#10182c"/>
+  <text x="200" y="168" fill="#1b2744" font-family="Georgia, serif" font-size="42" font-weight="700" text-anchor="middle">KV</text>
+  <text x="200" y="365" fill="#fff" font-family="sans-serif" font-size="18" text-anchor="middle">Kamalesh V</text>
+</svg>
