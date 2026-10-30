@@ -89,6 +89,22 @@ app.use('/api/arts', artRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/admin', adminRoutes);
 
+// Serve static frontend in production if built
+const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.get('*', (req, res, next) => {
+    if (
+      req.path.startsWith('/api') ||
+      req.path.startsWith('/uploads') ||
+      req.path.startsWith('/images')
+    ) {
+      return next();
+    }
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  });
+}
+
 // Error Handling Middleware
 app.use((err, req, res, next) => {
   console.error('Unhandled Server Error:', err);
@@ -99,11 +115,17 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server & Connect Database
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`=======================================================`);
-    console.log(`  CANVASCRAFT ART GALLERY BACKEND RUNNING ON PORT ${PORT}`);
-    console.log(`  API Health: http://localhost:${PORT}/api/health`);
-    console.log(`=======================================================`);
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`=======================================================`);
+      console.log(`  CANVASCRAFT ART GALLERY BACKEND RUNNING ON PORT ${PORT}`);
+      console.log(`  API Health: http://localhost:${PORT}/api/health`);
+      console.log(`=======================================================`);
+    });
+  })
+  .catch((err) => {
+    console.error('Fatal error connecting to MongoDB Compass:', err.message);
+    process.exit(1);
   });
-});
+

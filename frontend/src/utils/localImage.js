@@ -8,9 +8,12 @@ export function localMediaUrl(url, type = 'art') {
   const fallback = FALLBACKS[type] || FALLBACKS.art;
   if (!url) return fallback;
   if (typeof url !== 'string') return fallback;
-  if (url.startsWith('blob:')) return url;
-  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
-    return fallback;
+  if (url.startsWith('blob:') || url.startsWith('data:') || url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  if (backendUrl && url.startsWith('/uploads/')) {
+    return `${backendUrl.replace(/\/+$/, '')}${url}`;
   }
   return url;
 }
